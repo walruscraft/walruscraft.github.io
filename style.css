@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: inline-block;
+    /* max-width: 300px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Lucida Sans', monospace;
+    color: #333;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #666;
+}
+
+.dangling-object {
+    animation: dangling 3s cubic-bezier(0.4, 0.0, 0.5, 1) infinite;
+    transform-origin: top center;
+}
+
+.dangling-object delayed-1 {
+    animation-delay: 1s;
+}
+
+.dangling-object delayed-2 {
+    animation-delay: 2s;
+}
+
+.dangling-object delayed-3 {
+    animation-delay: 3s;
+}
+
+@keyframes dangling {
+    0% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}

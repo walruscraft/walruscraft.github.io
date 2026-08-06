@@ -1,4 +1,5 @@
 title: Vak not found
+repository: walruscraft/walruscraft.github.io
 description: Embedded developer poking at web things. What could go wrong?
 theme: jekyll-theme-modernist
 exclude:

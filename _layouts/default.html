@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{% seo %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header {% unless site.description %} class="without-description" {% endunless %}>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        {% if site.description %}
+          <p>{{ site.description }}</p>
+        {% endif %}
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+    </div>
+    <footer>
+      <p>Hosted on <a href="{{ site.github.repository_url }}">GitHub Pages</a> &mdash; theme by <a href="https://github.com/orderedlist">orderedlist</a>, repainted.</p>
+    </footer>
+  </body>
+</html>

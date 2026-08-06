@@ -2,13 +2,14 @@
 ---
 
 @import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@400;700&display=swap');
 
-// Matrix palette. The theme has no Sass variables (all colors are
-// hardcoded), so we re-cover its selectors below the import.
+// Matrix palette: green is an accent, not the whole wardrobe.
 $green: #00ff41;
 $green-dim: #00b32d;
 $green-dark: #007a1f;
-$text: #99e699;
+$text: #c9d1c9;
+$bright: #eef3ee;
 $panel: #0a120a;
 
 html {
@@ -16,9 +17,13 @@ html {
 }
 
 body {
-  background: #000; // also kills the checker.png texture
   color: $text;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font: 15px/1.6 "IBM Plex Mono", Monaco, "Lucida Console", monospace;
+  // faint CRT scanlines instead of the original checker texture
+  background: repeating-linear-gradient(
+    #000 0px, #000 2px,
+    #060906 2px, #060906 4px
+  ) fixed;
 }
 
 .wrapper {
@@ -31,7 +36,7 @@ a {
 }
 
 strong {
-  color: #ccffcc;
+  color: $bright;
 }
 
 header {
@@ -40,11 +45,13 @@ header {
 
   h1 {
     color: $green;
+    font-family: "Share Tech Mono", Monaco, monospace;
     text-shadow: 0 0 10px rgba($green, 0.7);
   }
 
   p {
     color: $green-dim;
+    width: auto; // theme hardcodes 300px, hence the odd line wrap
   }
 }
 
@@ -54,7 +61,8 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #ccffcc;
+  color: $bright;
+  font-family: "Share Tech Mono", Monaco, monospace;
 }
 
 blockquote {
@@ -72,7 +80,7 @@ pre {
 }
 
 th, dt {
-  color: #ccffcc;
+  color: $bright;
 }
 
 th, td {
@@ -84,7 +92,7 @@ hr {
 }
 
 footer {
-  color: $green-dim;
+  color: #6f7f6f;
 
   a {
     color: $green;

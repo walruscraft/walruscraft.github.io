@@ -1,0 +1,92 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Matrix palette. The theme has no Sass variables (all colors are
+// hardcoded), so we re-cover its selectors below the import.
+$green: #00ff41;
+$green-dim: #00b32d;
+$green-dark: #007a1f;
+$text: #99e699;
+$panel: #0a120a;
+
+html {
+  background: #000;
+}
+
+body {
+  background: #000; // also kills the checker.png texture
+  color: $text;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+
+.wrapper {
+  background: $panel;
+  box-shadow: 0 0 0 1px $green-dark, 0 0 25px rgba($green, 0.25);
+}
+
+a {
+  color: $green;
+}
+
+strong {
+  color: #ccffcc;
+}
+
+header {
+  background: linear-gradient(#0d1f0d, #071407);
+  border-bottom: 1px solid $green-dark;
+
+  h1 {
+    color: $green;
+    text-shadow: 0 0 10px rgba($green, 0.7);
+  }
+
+  p {
+    color: $green-dim;
+  }
+}
+
+section {
+  background: $panel;
+  border-top: 1px solid #123312;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ccffcc;
+}
+
+blockquote {
+  background: rgba($green, 0.07);
+  color: $text;
+}
+
+code, pre {
+  color: $green;
+}
+
+pre {
+  background: #020a02;
+  box-shadow: inset 0 0 0 1px $green-dark;
+}
+
+th, dt {
+  color: #ccffcc;
+}
+
+th, td {
+  border-bottom: 1px solid $green-dark;
+}
+
+hr {
+  background: $green-dark;
+}
+
+footer {
+  color: $green-dim;
+
+  a {
+    color: $green;
+  }
+}
